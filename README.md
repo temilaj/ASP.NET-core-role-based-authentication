@@ -1,4 +1,4 @@
-# ASP.NET-core-role-based-authentication
+# ASP.NET Core role based authentication and custom role creation
 Code sample detailing role-based authentication and how to create custom roles in ASP.NET core 
 
 ## This application consists of:
