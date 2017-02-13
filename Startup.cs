@@ -120,7 +120,7 @@ namespace WebApplication
                     var createPowerUser = await UserManager.CreateAsync(poweruser, UserPassword);
                     if (createPowerUser.Succeeded)
                     {
-                        //here we tie the new user to the role 
+                        //here we tie the new user to the "Admin" role 
                         await UserManager.AddToRoleAsync(poweruser, "Admin");
 
                     }

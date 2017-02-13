@@ -12,7 +12,7 @@ using WebApplication.Services;
 
 namespace WebApplication.Controllers
 {
-    [Authorize]
+    [Authorize(Roles="Admin")]
     public class ManageController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
