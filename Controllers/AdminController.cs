@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebApplication.Controllers
 {
     // [Authorize(Roles="Admin")]
+    [Authorize(Policy = "RequireAdminRole")]
     public class AdminController : Controller
     {
         public IActionResult Index()

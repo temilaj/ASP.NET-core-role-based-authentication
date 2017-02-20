@@ -47,6 +47,10 @@ namespace WebApplication
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
