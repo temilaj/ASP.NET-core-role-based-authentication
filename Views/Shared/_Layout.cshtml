@@ -38,13 +38,20 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2016 - WebApplication</p>
-        </footer>
-    </div>
+    @if(@ViewData["PageID"] == "Admin")
+    {
+            @RenderBody()
+    }
+    else{
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - WebApplication</p>
+            </footer>
+        </div>
+    }
+    
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
