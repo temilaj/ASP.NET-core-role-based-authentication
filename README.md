@@ -1,5 +1,5 @@
 # ASP.NET Core role based authentication and custom role creation
-Code sample detailing how to create custom roles in ASP.NET core on startup and role-based authentication using role checks and policy based checks
+Code sample detailing how to create custom roles in ASP.NET core on startup and role-based authentication using role checks and policy based checks.
 
 ## This application consists of:
 
@@ -21,6 +21,6 @@ dotnet run
 ```
 
 The `dotnet restore` command first restores the necessary packages required to run the application, 
-the `dotnet restore` command simultaneously re-compiles and runs the `kestrel-server`.
+the `dotnet run` command simultaneously re-compiles and runs the `kestrel-server`.
 
 I would love to hear your [feedback](https://temilajumoke.com)
