@@ -1,5 +1,5 @@
 # ASP.NET Core role based authentication and custom role creation
-Code sample detailing role-based authentication and how to create custom roles in ASP.NET core 
+Code sample detailing how to create custom roles in ASP.NET core on startup and role-based authentication using role checks and policy based checks
 
 ## This application consists of:
 
