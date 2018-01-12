@@ -37,6 +37,11 @@ namespace ASP.NET_core_role_based_authentication
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -90,12 +95,12 @@ namespace ASP.NET_core_role_based_authentication
                 Email = Configuration.GetSection("AppSettings")["UserEmail"]
             };
 
-            string UserPassword = Configuration.GetSection("AppSettings")["UserPassword"];
-            var _user = await UserManager.FindByEmailAsync(Configuration.GetSection("AppSettings")["UserEmail"]);
+            string userPassword = Configuration.GetSection("AppSettings")["UserPassword"];
+            var user = await UserManager.FindByEmailAsync(Configuration.GetSection("AppSettings")["UserEmail"]);
 
-            if(_user == null)
+            if(user == null)
             {
-                    var createPowerUser = await UserManager.CreateAsync(poweruser, UserPassword);
+                    var createPowerUser = await UserManager.CreateAsync(poweruser, userPassword);
                     if (createPowerUser.Succeeded)
                     {
                         //here we tie the new user to the "Admin" role 
