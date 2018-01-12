@@ -4,23 +4,23 @@ Code sample detailing how to create custom roles in ASP.NET core on startup and 
 ## This application consists of:
 
 *   Sample pages using ASP.NET Core MVC
-*   [Gulp](https://go.microsoft.com/fwlink/?LinkId=518007) and [Bower](https://go.microsoft.com/fwlink/?LinkId=518004) for managing client-side libraries
+*   [Bower](https://go.microsoft.com/fwlink/?LinkId=518004) for managing client-side libraries
 *   Theming using [Bootstrap](https://go.microsoft.com/fwlink/?LinkID=398939)
+
+## Installing
+clone or download this repo into your local computer, check-in to the root directory of the app and run the app
+
+### [ASP.NET core 1.x](https://github.com/temilaj/ASP.NET-core-role-based-authentication/tree/version/dotnet-core-1-1)
+### [ASP.NET core 2.x](https://github.com/temilaj/ASP.NET-core-role-based-authentication/tree/version/dotnet-core-2-0)
 
 ## Run & Deploy
 
 restore the .NET core packages described in the `package.json`, install the npm and bower dependencies,and then update database with the migrations and run the project:
 
 ```bash
-dotnet restore
-npm install
-bower install
-dotnet ef database update
 dotnet run
-
 ```
 
-The `dotnet restore` command first restores the necessary packages required to run the application, 
 the `dotnet run` command simultaneously re-compiles and runs the `kestrel-server`.
 
 I would love to hear your [feedback](https://temilajumoke.com)
