@@ -1,23 +1,16 @@
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication.Controllers
+namespace ASP.NET_core_role_based_authentication.Controllers
 {
-    // [Authorize(Roles="Admin")]
-    [Authorize(Policy = "RequireAdminRole")]
+	// [Authorize(Roles="Admin")]
+	[Authorize(Policy = "RequireAdminRole")]
     public class AdminController : Controller
     {
         public IActionResult Index()
         {
-            ViewData["PageID"] = "Admin";
             return View();
         }
-
-        public IActionResult Settings()
-        {
-            ViewData["Message"] = "Just another page restricted to the super admin user ";
-            return View();
-        }
-       
     }
 }

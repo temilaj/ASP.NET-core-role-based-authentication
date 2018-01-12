@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using WebApplication.Models;
+using ASP.NET_core_role_based_authentication.Models;
 
-namespace WebApplication.Data
+namespace ASP.NET_core_role_based_authentication.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
